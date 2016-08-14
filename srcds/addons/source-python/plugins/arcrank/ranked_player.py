@@ -27,6 +27,11 @@ class RankedPlayer:
         self.last_seen_at = 0
         self.data = {}
 
+        self.session_score = 0
+        self.session_online_time = 0
+        self.session_initial_position = 0
+        self.session_data = {}
+
         self._loaded = False
 
     @property
@@ -49,6 +54,8 @@ class RankedPlayer:
             self.detected_at = db_ranked_player.detected_at
             self.last_seen_at = db_ranked_player.last_seen_at
             self.data = loads(db_ranked_player.data)
+
+            self.session_initial_position = self.position
 
         self._loaded = True
 

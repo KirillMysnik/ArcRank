@@ -20,6 +20,9 @@ def on_bomb_exploded(game_event):
         return
 
     player.data['bombs_exploded'] = player.data.get('bombs_exploded', 0) + 1
+    player.session_data['bombs_exploded'] = player.session_data.get(
+        'bombs_exploded', 0) + 1
+
     earn_points(player, int(config['scoring']['per_bomb_explosion']),
                 strings_module['reason bomb_exploded'])
 
@@ -32,5 +35,8 @@ def on_bomb_defused(game_event):
         return
 
     player.data['bombs_defused'] = player.data.get('bombs_defused', 0) + 1
+    player.session_data['bombs_defused'] = player.session_data.get(
+        'bombs_defused', 0) + 1
+
     earn_points(player, int(config['scoring']['per_bomb_defusion']),
                 strings_module['reason bomb_exploded'])

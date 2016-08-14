@@ -12,6 +12,7 @@ points_lost_storage = {}
 
 def earn_points(player, points, reason):
     player.score += points
+    player.session_score += points
     points_earned_storage[player.player.index] = points_earned_storage.get(
         player.player.index, 0) + points
 
@@ -21,6 +22,7 @@ def earn_points(player, points, reason):
 
 def lose_points(player, points, reason):
     player.score += points  # Note the "+" here: points is already signed
+    player.session_score += points
     points_lost_storage[player.player.index] = points_lost_storage.get(
         player.player.index, 0) + points
 

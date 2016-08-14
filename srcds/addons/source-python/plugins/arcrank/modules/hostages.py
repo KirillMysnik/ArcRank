@@ -22,6 +22,9 @@ def on_hostage_rescued(game_event):
     player.data['hostages_rescued'] = player.data.get(
         'hostages_rescued', 0) + 1
 
+    player.session_data['hostages_rescued'] = player.session_data.get(
+        'hostages_rescued', 0) + 1
+
     earn_points(player, int(config['scoring']['per_hostage_rescued']),
                 strings_module['reason hostage_rescued'])
 
@@ -34,6 +37,9 @@ def on_bomb_defused(game_event):
         return
 
     player.data['hostages_killed'] = player.data.get(
+        'hostages_killed', 0) + 1
+
+    player.session_data['hostages_killed'] = player.session_data.get(
         'hostages_killed', 0) + 1
 
     lose_points(player, int(config['scoring']['per_hostage_killed']),

@@ -20,8 +20,12 @@ def on_player_hurt(game_event):
 
     hitgroup_field = "hitgroup{}_hits".format(game_event['hitgroup'])
     attacker.data[hitgroup_field] = attacker.data.get(hitgroup_field, 0) + 1
+    attacker.session_data[hitgroup_field] = attacker.session_data.get(
+        hitgroup_field, 0) + 1
 
     attacker.data['shots_landed'] = attacker.data.get('shots_landed', 0) + 1
+    attacker.session_data['shots_landed'] = attacker.session_data.get(
+        'shots_landed', 0) + 1
 
 
 @Event('weapon_fire')
@@ -39,3 +43,5 @@ def on_weapon_fire(game_event):
         return
 
     player.data['shots_total'] = player.data.get('shots_total', 0) + 1
+    player.session_data['shots_total'] = player.session_data.get(
+        'shots_total', 0) + 1
