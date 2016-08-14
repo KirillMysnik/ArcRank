@@ -20,7 +20,7 @@ def say_place(command, index, team_only):
         tell(ranked_player, strings_module['response not_ranked'])
 
     else:
-        delta = datetime.fromtimestamp(server.last_sorted_at) - datetime.now()
+        delta = datetime.now() - datetime.fromtimestamp(server.last_sorted_at)
         tell(ranked_player, strings_module['response ranked'].tokenize(
             pos=ranked_player.position,
             total=server.total_positions,
