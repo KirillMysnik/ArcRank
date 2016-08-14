@@ -21,8 +21,9 @@ def say_place(command, index, team_only):
 
     else:
         delta = datetime.now() - datetime.fromtimestamp(server.last_sorted_at)
+        delta_raw = str(delta).split('.')[0]
         tell(ranked_player, strings_module['response ranked'].tokenize(
             pos=ranked_player.position,
             total=server.total_positions,
-            updated=str(delta),
+            updated=delta_raw,
         ))
