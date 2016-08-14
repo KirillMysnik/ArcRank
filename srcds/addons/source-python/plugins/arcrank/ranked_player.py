@@ -43,7 +43,7 @@ class RankedPlayer:
             steamid=self._steamid).first()
 
         if db_ranked_player is not None:
-            self.score = db_ranked_player.account
+            self.score = db_ranked_player.score
             self.position = db_ranked_player.position
             self.online_time = db_ranked_player.online_time
             self.detected_at = db_ranked_player.detected_at
