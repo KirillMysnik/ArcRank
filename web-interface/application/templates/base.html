@@ -2,13 +2,19 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>{% block title %}Index - ArcRank{% endblock %}</title>
-		<link rel="stylesheet" type="text/css" href="/static/css/theme.css" />
+		<title>{% block title %}JavaScript Page Loader{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/page_loader.css" />
         <script type="application/javascript">
             var APP = {};
         </script>
-        <script type="application/javascript" src="/static/js/loader.js"></script>
+        <script type="application/javascript" src="/static/js/ajax.js"></script>
+        <script type="application/javascript" src="/static/js/nodes.js"></script>
+        <script type="application/javascript" src="/static/js/script_loader.js"></script>
+        <script type="application/javascript" src="/static/js/page_loader.js"></script>
+        <script type="application/javascript" src="/static/js/langs.js"></script>
+		{% block head %}{% endblock %}
 	</head>
-	<body>
+	<body id="body">
+		{% block body %}{% endblock %}
 	</body>
 </html>

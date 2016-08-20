@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(/static/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+.clear {
+    clear: both;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Roboto";
+}
+
+body {
+    background-color: #FCFFC7;
+}
+
+.main {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #FFF;
+    border: 3px solid #706A00;
+    border-width: 0 3px 0 3px;
+    box-shadow: 0 0 15px #706A00;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: transparent url(/static/img/logo.png) center center no-repeat;
+}
+
+.logo:hover {
+    background-image: url(/static/img/logo_hover.png);
+}
+
+.nav-container-wrap {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-container {
+    display: inline-block;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.nav-container li {
+    float: left;
+    margin: 0 5px;
+}
+
+.nav-container li a {
+    display: block;
+    padding: 7px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: #5E5E5E;
+}
+
+.nav-container li a:hover {
+    background-color: #000;
+}
+
+.nav-container li a.active {
+    color: #ffff00;
+}
+
+.app-desc {
+    font-size: 11pt;
+    width: 500px;
+    padding: 20px;
+    margin: 35px;
+    text-align: justify;
+    background-color: #FCFFC7;
+    border: 3px solid #706A00;
+    box-shadow: inset 0 0 15px #706A00;
+    border-radius: 15px;
+}

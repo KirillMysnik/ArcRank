@@ -1,5 +1,13 @@
+from json import load
+import os.path
+
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
+
+with open(os.path.join(
+        os.path.dirname(__file__), 'arcrank-config.json'), 'r') as f:
+
+    config = load(f)
 
 app = Flask(__name__)
 

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/theme.css" />
+    <script type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function (e) {
+			APP['ScriptLoader'].loadScript("/static/js/inits/arcrank.js");
+		});
+    </script>
+{% endblock %}

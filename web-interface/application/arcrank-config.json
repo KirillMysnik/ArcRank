@@ -1,0 +1,29 @@
+{
+  "application": {
+    "default-language": "en-US",
+    "languages": [
+      "en-US",
+      "ru-RU"
+    ]
+  },
+  "navigation": {
+    "nav-links": [
+      {
+        "url": "index.js",
+        "title": "NAV_HOME"
+      },
+      {
+        "url": "search.js",
+        "title": "NAV_SEARCH"
+      },
+      {
+        "url": "servers.js",
+        "title": "NAV_SERVERS"
+      },
+      {
+        "url": "help.js",
+        "title": "NAV_HELP"
+      }
+    ]
+  }
+}

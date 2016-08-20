@@ -1,7 +1,7 @@
-APP['Loader'] = function () {
-    var loader = this;
+APP['AJAXClass'] = function () {
+    var ajax = this;
 
-    var postAjax = function (url, data, successCallback, errorCallback) {
+    this.post = function (url, data, successCallback, errorCallback) {
         var xmlhttp = new XMLHttpRequest();
 
         xmlhttp.onreadystatechange=function() {
@@ -17,3 +17,5 @@ APP['Loader'] = function () {
         xmlhttp.send(JSON.stringify(data, null, '\t'));
     };
 };
+
+APP['AJAX'] = new APP['AJAXClass']();
